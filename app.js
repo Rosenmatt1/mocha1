@@ -1,3 +1,3 @@
-module.exports = () => {
-  return 'hello'
+module.exports = {
+ sayHello: () => "hello"
 }

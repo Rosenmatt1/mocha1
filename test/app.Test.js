@@ -1,8 +1,10 @@
 const assert = require('chai').assert
-const app = require('../app')
+const sayHello = require('../app').sayHello
+// const app = require('../app.js')
 
 describe('App', () => {
   it('app should return hello', () => {
-    assert.equal(app(), 'hello')
+    assert.equal(sayHello(), "hello")
   })
 })
+
