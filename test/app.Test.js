@@ -3,9 +3,11 @@ const assert = require('chai').assert
 // const addNumbers = require('../app').addNumbers
 const app = require('../app.js')
 
+const typeOfAddNumbers = app.addNumbers()  //way to refactor
+
 describe('App', () => {
   it('sayHello should return hello', () => {
-    assert.equal(app.sayHello(), "hello")
+    assert.equal(app.sayHello(), "hello")  //not best practice to invoke here
   })
 
   it('sayHello should return type string',() => {
@@ -19,8 +21,7 @@ describe('App', () => {
   })
 
   it('addNumbers should be a number', () => {
-    let result = app.addNumbers(4, 7)
-    assert.typeOf(result, "number")
+    assert.typeOf(typeOfAddNumbers, "number")
   })
 
 })
